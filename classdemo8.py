@@ -17,16 +17,16 @@ class single(object):
             print("第一次一定会被初始化，然后就不会再初始化了")
         single.isfirstinit = True
 
-    if __name__ == "__main__":
+if __name__ == "__main__":
          # 调试的时候，不能在这里创建对象
-        # s1 = single()
-        # s2 = single()
-        # print(id(s1))
-        # print(id(s2))
+        s1 = single()
+        s2 = single()
+        print(id(s1))
+        print(id(s2))
         pass
 
 
-s1 = single()
-s2 = single()
-print(id(s1))
-print(id(s2))
+# s1 = single()
+# s2 = single()
+# print(id(s1))
+# print(id(s2))

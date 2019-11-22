@@ -4,20 +4,18 @@
    
 """
 
+
 class Person():
     def __init__(self, name):
         self.name = name
         self.__age = 18
-    
+
     def __secret(self):
         print("%s 的年龄是 %d" % (self.name, self.__age))
+
+
 if __name__ == "__main__":
-    p =Person("xiaofang")
+    p = Person("xiaofang")
     print(p._Person__age)
     p._Person__secret()
     Person._Person__secret(p)
-
-
-        
-
- 

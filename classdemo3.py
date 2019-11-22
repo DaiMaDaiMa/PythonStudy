@@ -12,4 +12,3 @@ if __name__ == "__main__":
     print(fish.color)
     fish.eyes = "two"  # 动态的添加对象属性 eyes
     print(fish.eyes)
-    

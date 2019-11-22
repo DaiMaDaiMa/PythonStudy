@@ -6,6 +6,7 @@ class Method():
         print(cls)
         pass
 
+
 if __name__ == "__main__":
 
     m = Method()

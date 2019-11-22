@@ -10,7 +10,7 @@ class Xiao(Person):
         self.name = name
 
     def __del__(self):
-        super().__del__() 
+        super().__del__()
         # 最后需要说明的是，如果父类提供了 __del__() 方法，
         # 则系统重写 __del__() 方法时必须显式调用父类的 __del__() 方法，
         # 这样才能保证合理地回收父类实例的部分属性。

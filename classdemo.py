@@ -2,6 +2,7 @@ class Dog():
     name = "hashiqi"
     pass
 
+
 if __name__ == "__main__":
     dog = Dog()
     dog.name = "maomao"

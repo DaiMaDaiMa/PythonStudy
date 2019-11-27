@@ -10,6 +10,6 @@ import socket
 
 UDP_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-UDP_socket.sendto("hello world".encode(), ("127.0.0.1", 8080))
+UDP_socket.sendto("hello world".encode(), ("192.168.0.3", 8080))
 
 UDP_socket.close()

@@ -14,6 +14,8 @@
 import socket
 # 2.创建socket对象
 tcp_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# 设置地址可以重用，目的是解决短时间内重启服务器时报的地址错误
+tcp_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, True)
 # 3.绑定端口号
 tcp_socket.bind(("", 4567))
 # 4.设置最大连接数

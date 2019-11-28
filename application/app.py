@@ -1,7 +1,7 @@
 from application import utils
 
 
-def fiel_path(status, recv_data):
+def fiel_path(game_path, status, recv_data):
     # # 8.获取客户端指定请求信息
     # # 第一次\r\n出现的位置
     # first_index = recv_data.find("\r\n")
@@ -19,7 +19,7 @@ def fiel_path(status, recv_data):
     # response_blank = "\r\n"
     response_info = utils.creat_response(status, recv_data)
     try:
-        with open("static"+response_info[0], "rb") as file:
+        with open(game_path + response_info[0], "rb") as file:
             response_body = file.read()
 
     # 10.返回信息给客户端

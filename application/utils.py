@@ -13,6 +13,7 @@ def creat_response(status, recv_data):
     # 9.拼接响应协议
     response_line = "HTTP/1.1 %s\r\n" % status
     response_heard = "Server:hello\r\n"
+    response_heard += "Content-Type: text/html\r\n"
     response_blank = "\r\n"
 
     return (final_page, response_line, response_heard, response_blank)

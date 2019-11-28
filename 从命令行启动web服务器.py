@@ -78,7 +78,7 @@ class WebServer():
 
         #     response_msg = (response_line + response_heard +
         #                     response_blank).encode() + response_body
-        response_msg =  app.fiel_path("200 ok", recv_data)
+        response_msg =  app.fiel_path("static", "200 ok", recv_data)
         new_socket.send(response_msg)
 
 

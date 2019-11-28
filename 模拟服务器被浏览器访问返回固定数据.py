@@ -11,7 +11,7 @@
 10.关闭套接字
 """
 
-import socket 
+import socket
 
 # 2.创建socket对象
 tcp_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -35,9 +35,8 @@ while True:
     response_heard = "Server:hello\r\n"
     response_blank = "\r\n"
     response_body = "Hello World"
-    response_msg = response_line +response_heard + response_blank+ response_body
+    response_msg = response_line + response_heard + response_blank + response_body
     # 9.发送数据给客户端
     new_socket.send(response_msg.encode())
     # 10.关闭套接字
 tcp_socket.close()
-

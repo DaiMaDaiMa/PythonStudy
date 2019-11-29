@@ -18,7 +18,7 @@ def f2():
 
 def f3():
     global b
-    b = b + 10
+    b = b + 10  # 访问外部变量，可以直接访问打印，但不能运算。。UnboundLocalError
     print("f3", b)
 
 

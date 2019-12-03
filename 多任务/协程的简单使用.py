@@ -3,8 +3,6 @@
 """
 
 import time
-
-
 def work1():
     while True:
         print("work1正在工作。。。")

@@ -33,6 +33,7 @@ def application(current_dir, request_data, ip_port):
     file_path = parse_request(request_data, ip_port)
     # 定义变量保存资源路径
     resource_path = current_dir+file_path
+    print(resource_path)
 
     try:
         # 通过 with open 读取文件

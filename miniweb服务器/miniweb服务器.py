@@ -61,7 +61,8 @@ class WebServer(object):
             return
 
         # 使用 application文件夹 app 模块的 application() 函数处理
-        response_data = app.application("static", request_data, ip_port)
+        response_data = app.application(
+            "miniweb服务器\static", request_data, ip_port)
 
         # 10、发送响应报文
         new_client_socket.send(response_data)

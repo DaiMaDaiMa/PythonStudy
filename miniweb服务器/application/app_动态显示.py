@@ -1,9 +1,5 @@
-from application import funs
-from application import urls
-import time
 from application import utils
-import sys
-sys.path.append("miniweb服务器\application")
+import time
 
 
 def parse_request(request_data, ip_port):
@@ -40,11 +36,22 @@ def application(current_dir, request_data, ip_port):
     resource_path = current_dir+file_path
     response_data = ""
     if file_path.endswith(".py"):
-        if file_path in urls.route_dict:
-            func_name = urls.route_dict[file_path]
-            response_body = func_name()
+        if file_path == "/gettime.py":
+            response_body = "this is a test %s" % time.ctime()
             response_data = utils.create_http_response(
                 "200 OK", response_body.encode())
+        elif file_path == "/center.py":
+            response_body = "this is center"
+            response_data = utils.create_http_response(
+                "200 OK", response_body.encode())
+        elif file_path == "/hello.py":
+            response_body = "this is hello"
+            response_data = utils.create_http_response(
+                "200 OK", response_body.encode())
+        else:
+            response_body = "sorry not found"
+            response_data = utils.create_http_response(
+                "404 NOT FOUND ", response_body.encode())
 
     else:
         try:

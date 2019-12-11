@@ -13,9 +13,11 @@ TCP服务端
 11、关闭操作
 
 """
+from application import app
 import socket
 # 导入模块
-from application import app
+import sys
+sys.path.append("miniweb服务器\application")
 
 
 #  ws = WebServer()
